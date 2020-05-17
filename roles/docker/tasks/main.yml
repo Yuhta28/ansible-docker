@@ -1,0 +1,7 @@
+---
+- name: Dockerイメージを取得
+  docker_image:
+    name: pacur/centos-7
+    source: pull
+
+# tasks file for docker

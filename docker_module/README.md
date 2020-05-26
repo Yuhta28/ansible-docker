@@ -1,0 +1,2 @@
+# Docker関連のモジュール
+ansible-containerの代わりに他のdocker系モジュールを触ってAnsibleからdockerコンテナの管理を体験してみる。

@@ -1,0 +1,15 @@
+- name: Create container
+  hosts: localhost
+  tasks:
+  - name: web container
+    docker_container:
+      name: web
+      image: web-image
+      state: started
+      ports:
+       - "8080:80"
+      tty: true
+      detach: true
+    register: contaier_result
+
+  - debug: var=contaier_result

@@ -1,0 +1,10 @@
+- name: Create a data container
+  hosts: localhost
+  tasks:
+  - name: create container
+    docker_container:
+      name: worpress
+      hostname: "sample"
+      image: wordpress:latest
+      detach: yes
+      auto_remove: yes

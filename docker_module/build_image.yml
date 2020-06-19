@@ -1,0 +1,11 @@
+- name: Build node.js image
+  hosts: localhost
+  tasks:
+  - name: build node.js
+    docker_image:
+      build:
+        path: ./dockerFile
+      name: yuta28/ansible-test
+      tag: testimage
+      push: yes
+      source: build

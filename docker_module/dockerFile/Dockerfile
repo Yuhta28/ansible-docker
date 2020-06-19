@@ -1,7 +1,10 @@
-FROM centos
-LABEL test
-RUN yum -y install httpd
-RUN yum clean all
-COPY index.html /var/www/html/index.html
-RUN sudo systemctl start httpd
-RUN sudo systemctl enable httpd
+FROM node:latest
+ENV NUXT_HOST=0.0.0.0
+WORKDIR /app
+
+COPY ./app/package.json ./app/yarn.lock ./
+RUN yarn install
+
+COPY ./app .
+
+CMD ["yarn", "run", "dev"]

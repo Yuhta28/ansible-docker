@@ -1,0 +1,17 @@
+- hosts: all
+  vars:
+    ansible_bender:
+      base_image: "docker.io/library/python:3-alpine"
+      buildah_from_extra_args: "--dns 8.8.8.8"
+      ansible_extra_args: "-vvv"
+
+      working_container:
+        volumes:
+          - "{{ playbook_dir }}:/src"
+
+      target_image:
+        name: challet
+        labels:
+          x: y
+        environment:
+          asd: '{{ playbook_dir }}'

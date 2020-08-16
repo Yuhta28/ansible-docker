@@ -1,12 +1,12 @@
 - name: Build Nuxt.js image
   hosts: localhost
   tasks:
-  - name: build node.js
+  - name: build nuxt.js
     docker_image:
       build:
         path: ./dockerFile
       name: yuta28/ansible-test
-      tag: testimage
+      tag: Nuxtimage
       push: yes
       source: build
     register: build_result

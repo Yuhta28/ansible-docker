@@ -1,7 +1,7 @@
-- name: Create container
+- name: Create and buid container
   hosts: localhost
   tasks:
-  - name: web container
+  - name: Nuxt container
     docker_container:
       name: web
       image: web-image

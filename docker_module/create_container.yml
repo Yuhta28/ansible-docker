@@ -3,11 +3,11 @@
   tasks:
   - name: Nuxt container
     docker_container:
-      name: web
-      image: web-image
+      name: NuxtContaier
+      image: yuta28/ansible-test:Nuxtimage
       state: started
       ports:
-       - "8080:80"
+        - "127.0.0.1:8080:3000"
       tty: true
       detach: true
     register: contaier_result

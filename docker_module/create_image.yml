@@ -1,9 +1,0 @@
-- name: Create web image
-  hosts: localhost
-  tasks:
-  - name: Build image
-    docker_image:
-      name: web-image
-      build:
-        path: /home/yuhta/Desktop/ansible_docker/ansible-docker/docker_module/dockerFile
-      source: build

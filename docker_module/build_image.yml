@@ -1,4 +1,4 @@
-- name: Build node.js image
+- name: Build Nuxt.js image
   hosts: localhost
   tasks:
   - name: build node.js
@@ -9,3 +9,6 @@
       tag: testimage
       push: yes
       source: build
+    register: build_result
+
+  - debug: var=build_result

@@ -3,7 +3,7 @@
   tasks:
   - name: Nuxt container
     docker_container:
-      name: NuxtContaier
+      name: NuxtContanier
       image: yuta28/ansible-test:Nuxtimage
       state: started
       ports:

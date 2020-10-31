@@ -5,7 +5,7 @@
     docker_image:
       build:
         path: ./dockerFile
-      name: yuta28/ansible-test
+      name: yuta28/ansible-test1
       tag: Nuxtimage
       push: yes
       source: build

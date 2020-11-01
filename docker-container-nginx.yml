@@ -1,8 +1,0 @@
-- name: Docker Container
-  hosts: nginx
-  connection: docker
-  tasks:
-    - name: apt update
-      apt: upgrade=dist update_cache=yes
-    - apt: name=nginx state=latest
-    - service: name=nginx state=restarted enabled=yes

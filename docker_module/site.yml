@@ -1,0 +1,10 @@
+---
+- name: AnsibleのDockerモジュールを使って、コンテナのイメージビルドからコンテナ管理まで
+  hosts: localhost
+  roles:
+    - name: build_image
+      tags:
+        - build_image
+    - name: create_container
+      tags:
+        - create_container

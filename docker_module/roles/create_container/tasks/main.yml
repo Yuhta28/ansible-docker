@@ -1,9 +1,6 @@
-- name: Create and buid container
-  hosts: localhost
-  tasks:
   - name: Nuxt container
     docker_container:
-      name: NuxtContanier
+      name: NuxtContainer
       image: yuta28/ansible-test:Nuxtimage
       state: started
       ports:
